@@ -8,6 +8,7 @@ const Modal = ({
   contentStyle,
   close,
   title,
+  anchorElementId,
 }) => {
   const defaultModalStyle = {
     position: "fixed",
@@ -41,18 +42,36 @@ const Modal = ({
           onClick={(e) => e.stopPropagation()}
         >
           <div>
-            <div className="modal-content-title">
-              <h2>{title}</h2>
-              <button onClick={close}>
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
+            {!!title && (
+              <div className="modal-content-title">
+                <h2>{title}</h2>
+              </div>
+            )}
+            <button
+              className="modal-content-close"
+              onClick={close}
+            >
+              <span
+                aria-hidden="true"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "100%",
+                  height: "100%",
+                }}
+              >
+                &times;
+              </span>
+            </button>
             {children}
           </div>
         </div>
       </div>
     ) : null,
-    document.querySelector("body")
+    anchorElementId
+      ? document.getElementById(`#${anchorElementId}`)
+      : document.querySelector("body")
   );
 };
 

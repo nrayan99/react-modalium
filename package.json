@@ -1,7 +1,7 @@
 {
-  "name": "react-modalium",
+  "name": "react-modalium-test",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,6 +13,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "devDependencies": {
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",

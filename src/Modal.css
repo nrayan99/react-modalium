@@ -23,3 +23,21 @@
 .modal-content-title button:hover {
   color: gray;
 }
+.modal-content {
+  position: relative;
+  margin: 50px;
+}
+.modal-content-close{
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  cursor: pointer;
+  background-color: black;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  color: #fff;
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+}

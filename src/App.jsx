@@ -16,7 +16,16 @@ function App() {
         <button onClick={() => open()}>Open Modal</button>
       </p>
 
-      <Modal isOpen={isOpen} close={close} title={'Modal title'}>
+      <Modal isOpen={isOpen} close={close} modalStyle={
+        {
+          backgroundColor: 'rgba(0,0,0,0.5)'
+        }
+      }
+      contentStyle={{
+        width :'max(50%, 500px)',
+        height :'fit-content',
+      }}
+      >
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           voluptatum, quibusdam, quos, voluptate voluptas dolorum quod
