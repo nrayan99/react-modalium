@@ -1,7 +1,17 @@
 import { createPortal } from "react-dom";
+import React from "react";
 import "./Modal.css";
 
-const Modal = ({
+interface ModalProps {
+  children: React.ReactNode;
+  isOpen: boolean;
+  modalStyle?: React.CSSProperties;
+  contentStyle?: React.CSSProperties;
+  close: () => void;
+  title?: string;
+  anchorElementId?: string;
+}
+const Modal : React.FC<ModalProps> = ({
   children,
   isOpen,
   modalStyle,
@@ -10,7 +20,7 @@ const Modal = ({
   title,
   anchorElementId,
 }) => {
-  const defaultModalStyle = {
+  const defaultModalStyle: React.CSSProperties = {
     position: "fixed",
     top: "0",
     left: "0",
@@ -22,7 +32,7 @@ const Modal = ({
     alignItems: "center",
   };
 
-  const defaultModalContentStyle = {
+  const defaultModalContentStyle: React.CSSProperties = {
     backgroundColor: "#fff",
     padding: "2rem",
     borderRadius: "0.5rem",
@@ -70,8 +80,8 @@ const Modal = ({
       </div>
     ) : null,
     anchorElementId
-      ? document.getElementById(`#${anchorElementId}`)
-      : document.querySelector("body")
+      ? document.getElementById(anchorElementId)!
+      : document.body
   );
 };
 

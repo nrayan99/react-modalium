@@ -1,7 +1,7 @@
 {
   "name": "react-modalium-test",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,7 +15,8 @@
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "dist/*.css"
   ],
   "devDependencies": {
     "@types/react": "^18.2.14",
@@ -25,6 +26,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.1",
+    "typescript": "^5.1.6",
     "vite": "^4.4.0"
   },
   "main": "./dist/react-modalium.umd.js",
@@ -37,5 +39,4 @@
   },
   "license": "MIT",
   "description": "a fully customizable modal component for react"
-
 }
