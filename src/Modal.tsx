@@ -9,7 +9,6 @@ interface ModalProps {
   contentStyle?: React.CSSProperties;
   close: () => void;
   title?: string;
-  anchorElementId?: string;
 }
 const Modal : React.FC<ModalProps> = ({
   children,
@@ -18,7 +17,6 @@ const Modal : React.FC<ModalProps> = ({
   contentStyle,
   close,
   title,
-  anchorElementId,
 }) => {
   const defaultModalStyle: React.CSSProperties = {
     position: "fixed",
@@ -79,9 +77,7 @@ const Modal : React.FC<ModalProps> = ({
         </div>
       </div>
     ) : null,
-    anchorElementId
-      ? document.getElementById(anchorElementId)!
-      : document.body
+     document.body
   );
 };
 

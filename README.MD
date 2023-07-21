@@ -15,7 +15,6 @@ This component has the following props:
 - `contentStyle`: Optional CSS styles for the modal content.
 - `close`: A function that closes the modal.
 - `title`: An optional title for the modal.
-- `anchorElementId`: The ID of the element where the modal will be create
 
 Here is an example of how to use this component:
 
@@ -51,4 +50,3 @@ export default App;
 | contentStyle | React.CSSProperties | Optional CSS styles for the modal content. |
 | close | () => void | A function that closes the modal. |
 | title | string | An optional title for the modal. |
-| anchorElementId | string | The ID of the element where the modal will be create. |

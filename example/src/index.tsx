@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div>
       <button onClick={() => setIsOpen(true)}>open</button>
-      <div>
+      <div id="test">
         <Modal title="test" isOpen={isOpen} close={() => setIsOpen(false)}>
           <p>test react-modalium</p>
         </Modal>
